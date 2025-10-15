@@ -24,3 +24,100 @@ body{
     background-color: var(--color-offwhite);
 }
 
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 220px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    & nav{
+        display: flex;
+        align-items: center;
+
+        & h1{
+            font-size: 24px;
+            font-weight: 500;
+            margin-right: 50px;
+        }
+
+    }
+    & ul{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 40px;
+        
+        & a{
+            text-decoration: none;
+            font-size: 20px;
+            color: var(--color-headings);
+            position: relative;
+
+            &::after{
+                content: "";
+                width: 0%;
+                height: 5px;
+                border-radius: 3px;
+                background-color: var(--color-headings);
+                position: absolute;
+                top: 100%;
+                right: 0%;
+                transition-duration: 200ms;
+            }
+            &.ativo::after, &:hover::after{
+                width: 100%;
+                left: 0%;
+            }
+
+            &.btn{
+                line-height: 48px;
+                padding: 0 32px;
+                background-color: var(--color-brand1);
+                color: var(--color-offwhite);
+                border-radius: 24px;
+                display: block;
+                transition-duration: 200ms;
+                &::after{
+                    display: none;
+                }
+                &:hover{
+                    background-color: #EB8E8E;
+                    color: var(--color-brand1);
+                }
+            }
+        }
+    }
+}
+
+.banner{
+    padding: 0 200px 0 260px;
+    display: flex;
+    align-items: flex-end;
+
+    & > div{
+
+        & h3{
+            font-size: 24px;
+            color: var(--color-headings);
+        }
+
+        & h1{
+            font-size: 80px;
+            color: var(--color-headings);
+            line-height: 104%;
+        }
+
+        & p{
+            width: 350px;
+            color: var(--color-headings);
+            line-height: 157%;
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+    }
+
+}
