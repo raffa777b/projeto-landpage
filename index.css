@@ -33,6 +33,11 @@ header{
     position: fixed;
     top: 0;
     left: 0;
+    transition-duration: 200ms;
+
+    &.active{
+        background-image: linear-gradient(var(--color-offwhite)50%, transparent);
+    }
 
     & nav{
         display: flex;
@@ -121,3 +126,103 @@ header{
     }
 
 }
+
+
+.cafes{
+    
+    background-image: url("imgs/bg-cafes.png");
+    background-size: contain;
+    background: no-repeat;
+    padding-top: 60px;
+   
+    & h3{
+        font-weight: 600;
+        font-size: 40px;
+        color: var(--color-headings);
+        text-align: center;
+
+        & div{
+            width: 325px;
+            height: 24px;
+            padding-bottom: 26px;
+            padding-left: 30px;
+            padding-right: ;
+            background-color: var(--color-headings);
+            margin: 0 auto;
+        }    
+    }
+
+    & p{
+        
+        color: var(--color-headings);
+        text-align: center;
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 16px;
+    }
+
+    & a{
+
+        color: var(--color-headings);
+        text-decoration: none;
+        display: block;
+        margin: 20px auto;
+        width: 120px;
+        text-align: center;
+        font-weight: bold;
+
+        &:hover{
+            color: var(--color-pink1);
+        }
+    }
+
+    & .opcoes{
+        display: flex;
+        gap: 70px;
+        text-align: center;
+        justify-content: center;
+
+        & div:nth-child(1){
+            background-image: linear-gradient(45deg,#C27D7A,#F6C7C5);
+        }
+        & div:nth-child(2){
+            background-image: linear-gradient(45deg,#54151194,#FAFAFAF2);
+        }
+        & div:nth-child(3){
+            background-image: linear-gradient(45deg,#0A0909F2,#541511F2);
+        }
+
+        & div{
+                width: 325px;
+                padding-top: 24px;
+                padding-bottom: 26px;
+                border-radius: 248px;
+                color: var(--color-offwhite);
+
+            & p{
+                width: auto;
+                color: var(--color-offwhite);
+
+                
+            }
+
+            & h5{
+                font-size: 20px;
+            }
+
+            & h4{
+                font-size: 32px;
+            }
+
+            & button{
+                width: 100%;
+                height: 46px;
+                margin-top: 30px;
+                border: 0;
+                border-radius: 32px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+        
